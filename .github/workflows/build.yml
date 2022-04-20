@@ -70,7 +70,14 @@ jobs:
       with:
         script-file: '.\installer.nsi'
 
+    - name: Upload Installer
+      uses: actions/upload-artifact@v2
+      with:
+        name: vATIS-Setup-${{ env.CLIENT_VER }}
+        path: vATIS-Setup-${{ env.CLIENT_VER }}.exe
+
     - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/v')
       uses: softprops/action-gh-release@v1
       with:
         name: vATIS ${{ env.CLIENT_VER }}
