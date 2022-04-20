@@ -69,7 +69,7 @@ namespace MetarDecoder
         /// </summary>
         public string ICAO { get; set; } = string.Empty;
 
-        public bool IsInternational => !ICAO.StartsWith("K") && !ICAO.StartsWith("P");
+        public bool IsInternational => !ICAO.StartsWith("K") && !ICAO.StartsWith("P") && !ICAO.StartsWith("C");
 
         /// <summary>
         /// Day of this observation
