@@ -29,6 +29,7 @@ namespace Vatsim.Vatis.Client
             {
                 Application.CurrentCulture = new CultureInfo("en-US");
                 Application.EnableVisualStyles();
+                Application.SetHighDpiMode(HighDpiMode.DpiUnawareGdiScaled);
                 Application.SetCompatibleTextRenderingDefault(false);
                 AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
                 AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
